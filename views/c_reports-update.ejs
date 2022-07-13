@@ -1,0 +1,30 @@
+
+    
+    <form action = "/c_reports/update-c_reports/<%= id %>" method="post">
+        <div class = "form-group">
+            <label for="customer_name">Customer id</label>
+            
+            <input type="text" class = "form-control" id = "c_id" aria-describedby="customerNameHelp"
+            value="<%= c_id %>" name="c_id">
+        </div>
+    
+        <div class = "form-group">
+            <label for="customer_name">Donated school items?</label>
+            <input type="text" class = "form-control" id = "school_items" aria-describedby="customerNameHelp"
+            value="<%= school_items %>" name="school_items">
+        </div>
+    
+        <div class = "form-group">
+            <label for="customer_name">Amount donared</label>
+            <input type="text" class = "form-control" id = "amount_donated" aria-describedby="customerNameHelp"
+            value="<%= amount_donated %>" name="amount_donated">
+        </div>
+    
+        <div class = "form-group">
+            <label for="customer_name">Special requests</label>
+            <input type="text" class = "form-control" id = "special_requests" aria-describedby="customerNameHelp"
+            value="<%= special_requests %>" name="special_requests">
+        </div>
+    
+        <button type = "submit" class = "btn btn-primary">Update</button>
+    </form>

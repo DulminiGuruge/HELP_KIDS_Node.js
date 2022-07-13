@@ -1,0 +1,53 @@
+ <!-- DataTales Example -->
+ <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Customer report details</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Customer id</th>
+                        <th>Customer Name</th>
+                        <th>Donated school items?</th>
+                        <th>Cash donated</th>
+                        <th>Special requests</th>
+                        
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Customer id</th>
+                        <th>Customer Name</th>
+                        <th>Donated school items?</th>
+                        <th>Cash donated</th>
+                        <th>Special requests</th>
+                    </tr>
+                </tfoot>
+
+                <tbody>
+
+                    <% for(var value of reports) { %>
+
+                        <tr>
+                            <td><%= value.c_id %></td>
+                            <td><%= value.c_name %></td>
+                            <td><%= value.school_items %></td>
+                            <td><%= value.amount_donated %></td>
+                            <td><%= value.special_requests %></td>
+                            <td>
+                            <a class="btn btn-success edit" href="../c_reports/edit/<%= value.id %>">Edit</a>
+                            <a class="btn btn-success details" href="../c_reports/details/<%= value.id %>">Details</a>                        
+                            <a class="btn btn-danger delete" onclick="return alert('Are You sure?')" href="../c_reports/delete/<%= value.id %>">Delete</a>                       
+                            </td>
+                        
+                        </tr>
+
+                    <% } %>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

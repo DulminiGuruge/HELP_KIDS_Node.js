@@ -1,0 +1,42 @@
+
+ <% for(var value of reports) { %>
+    <div>
+        <h4>Customer Report</h4>
+        <hr />
+        <dl >
+            <dt >
+                Customer Report Id
+            </dt>
+            <dd >
+                <%= value.c_id %>
+            </dd>
+            <dt >
+                Customer name
+            </dt>
+            <dd >
+                <%= value.c_name %>
+            </dd>
+            <dt >
+                Whether school items were donated?
+            </dt>
+            <dd >
+                <%= value.school_items %>
+            </dd>
+            <dt >
+                Amount donated
+            </dt>
+            <dd >
+                <%= value.amount_donated %>
+            </dd>
+            <dt >
+                Any special requests
+            </dt>
+            <dd >
+                <%= value.special_requests %>
+            </dd>
+            
+        </dl>
+    </div>
+
+
+    <% } %>

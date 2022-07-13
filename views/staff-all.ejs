@@ -1,0 +1,50 @@
+ <!-- DataTales Example -->
+ <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Staff Details</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </tfoot>
+
+                <tbody>
+
+                    <% for(var data1 of staff) { %>
+
+                        <tr>
+                            <td><%= data1.s_name %></td>
+                            <td><%= data1.role %></td>
+                            <td><%= data1.phone %></td>
+                            <td><%= data1.email %></td>
+                            <td>
+                                <a class="btn btn-success edit" href="../staff/edit/<%= data1.s_id %>">Edit</a>                       
+                                <a class="btn btn-danger delete" onclick="return alert('Are You sure?')" href="../staff/delete/<%= data1.s_id %>">Delete</a>                       
+                            </td>
+                        
+                        </tr>
+                       
+
+                    <% } %>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

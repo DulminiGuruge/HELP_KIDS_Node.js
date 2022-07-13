@@ -1,0 +1,39 @@
+<% if(message.length > 0) { %>
+<div class="alert alert-success">
+    <%= message %>
+</div>
+<% } %>
+
+<form action = "/customer/create-customer" method="post">
+    <div class = "form-group">
+        <label for="customer_name">Customer name</label>
+        <input type="text" class = "form-control" id = "c_name" aria-describedby="customerNameHelp"
+        placeholder="Enter customer name" name="c_name">
+    </div>
+
+    <div class = "form-group">
+        <label for="customer_name"> Date of Birth</label>
+        <input type="text" class = "form-control" id = "date_of_birth" aria-describedby="customerNameHelp"
+        placeholder="Enter customer name" name="date_of_birth">
+    </div>
+
+    <div class = "form-group">
+        <label for="customer_name">Address</label>
+        <input type="text" class = "form-control" id = "address" aria-describedby="customerNameHelp"
+        placeholder="Enter customer name" name="address">
+    </div>
+
+    <div class = "form-group">
+        <label for="customer_name">Phone</label>
+        <input type="text" class = "form-control" id = "phone" aria-describedby="customerNameHelp"
+        placeholder="Enter customer name" name="phone">
+    </div>
+
+    <div class = "form-group">
+        <label for="customer_name">School</label>
+        <input type="text" class = "form-control" id = "school" aria-describedby="customerNameHelp"
+        placeholder="Enter the school" name="school">
+    </div>
+
+    <button type = "submit" class = "btn btn-primary">Submit</button>
+</form>
